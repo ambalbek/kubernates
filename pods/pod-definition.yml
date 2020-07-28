@@ -1,0 +1,11 @@
+apiVersion: v1 #v1 or apps/v1
+kind: Namespace #POD, Service, Replicaset,
+metadata:
+  name: aziz-namespace #python-pod
+  #namespace: aziztest
+  labels:
+    app: myapp
+spec:
+  containers:
+    - name: python-contaainer
+      image: python

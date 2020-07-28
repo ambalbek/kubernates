@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: aziztest
+  labels: 
+     app: myapp
+     type: back-end
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx
+    
+    - name: aziztest
+      image: nginx
+      envFrom:
+        - configMapRef:
+            name: app-color

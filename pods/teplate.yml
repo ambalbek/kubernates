@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: aziztest
+  labels: 
+     app: myapp
+     #type: back-end
+spec:
+  containers:
+    - name: http-container
+      image: httpd
+      ports:
+        - containerPort: 8080
+    
+    #- name: django
+    #  image: django
+    #  command: ["2.0"]
+    #  args: ["10"]
+      envFrom:
+        - configMapRef:
+            name: app-color
+      
