@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: aziz-apps
+  labels:
+    app: aziz-app
+    type: for-rs
+spec:
+  template:
+    metadata:
+      name: aziz-apps-pod
+      labels:
+        app: aziz-app-pod
+        type: for-rs
+    spec:
+      containers:
+        - name: httpd
+          image: httpd:latest
+        - name: python
+          image: python
+  replicas: 5
+  selector:
+    matchLabels:
+      type: for-rs 

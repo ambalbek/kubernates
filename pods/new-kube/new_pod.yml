@@ -1,0 +1,14 @@
+apiVersion: app/v1 
+kind: ReplicaSet
+metadata:
+  name: myapp-new
+  labels:
+    app: azizapp
+spec:
+  containers:
+    - name: nginx
+      image: nginx:latest
+
+    - name: redis
+      image: redis:latest
+
