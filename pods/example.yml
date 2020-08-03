@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata:
+  name: aziztest
+  labels:
+    app: myapp
+spec:
+  template:
+    metadata:
+      name: myapp-pod
+      labels:
+        app: myapp-pod
+    spec:
+      containers:
+        - name: httpd
+          image: httpd
+        - name: redis
+          image: redis
+  replicas: 3
+  selector:
+    matchLabels:
+      app: myapp-pod
+
