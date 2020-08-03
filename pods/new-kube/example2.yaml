@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata: 
+  name: aziz
+  labels:
+    app: qwerty
+spec:
+  template:
+    metadata:
+      name: aziz-pod
+      labels:
+        app: qwerty
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
+  selector:
+    matchLabels:
+      app: qwerty
+  replicas: 10

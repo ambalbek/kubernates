@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapps
+  labels:
+    app: cronos
+spec:
+  template:
+    metadata: 
+      name: myapps
+      labels:
+        app: cronos
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
+  selector:
+    matchLabels:
+      app: cronos
+  replicas: 3
