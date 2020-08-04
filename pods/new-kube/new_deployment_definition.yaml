@@ -1,0 +1,73 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "1"
+  creationTimestamp: "2020-08-04T03:31:05Z"
+  generation: 1
+  labels:
+    app: cronos
+  name: myapps
+  namespace: default
+  resourceVersion: "533444"
+  selfLink: /apis/apps/v1/namespaces/default/deployments/myapps
+  uid: 233b7a66-e743-4950-836b-24e3a145f5bb
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 3
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: cronos
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: cronos
+      name: myapps
+    spec:
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: appcolor
+        image: httpd:2.4-alpine
+        imagePullPolicy: IfNotPresent
+        name: httpd
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      - image: redis
+        imagePullPolicy: Always
+        name: redis
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+status:
+  availableReplicas: 3
+  conditions:
+  - lastTransitionTime: "2020-08-04T03:31:09Z"
+    lastUpdateTime: "2020-08-04T03:31:09Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2020-08-04T03:31:05Z"
+    lastUpdateTime: "2020-08-04T03:31:09Z"
+    message: ReplicaSet "myapps-5b644fdc4c" has successfully progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
+    type: Progressing
+  observedGeneration: 1
+  readyReplicas: 3
+  replicas: 3
+  updatedReplicas: 3

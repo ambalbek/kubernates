@@ -12,8 +12,13 @@ spec:
         app: cronos
     spec:
       containers:
-        - name: nginx
-          image: nginx
+        - name: httpd
+          image: httpd:2.4-alpine
+          envFrom:
+            - configMapRef:
+                name: appcolor
+        - name: redis
+          image: redis
   selector:
     matchLabels:
       app: cronos
