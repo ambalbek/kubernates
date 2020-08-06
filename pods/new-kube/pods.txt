@@ -1,0 +1,17 @@
+NAMESPACE     NAME                                     READY   STATUS      RESTARTS   AGE
+default       busybox                                  0/1     Completed   0          13m
+default       myapps-df56f894-tt44x                    2/2     Running     0          9h
+default       nginx-6db489d4b7-h5764                   1/1     Running     0          39m
+docker        compose-78f95d4f8c-hnjx5                 1/1     Running     0          19d
+docker        compose-api-6ffb89dc58-7x7cj             1/1     Running     2          19d
+kube-system   coredns-5644d7b6d9-9hxjb                 1/1     Running     0          19d
+kube-system   coredns-5644d7b6d9-dj4cm                 1/1     Running     0          19d
+kube-system   etcd-docker-desktop                      1/1     Running     0          19d
+kube-system   kube-apiserver-docker-desktop            1/1     Running     0          19d
+kube-system   kube-controller-manager-docker-desktop   1/1     Running     0          19d
+kube-system   kube-proxy-n5s9p                         1/1     Running     0          19d
+kube-system   kube-scheduler-docker-desktop            1/1     Running     0          19d
+kube-system   metrics-server-7cb45bbfd5-mdm92          1/1     Running     0          30h
+kube-system   storage-provisioner                      1/1     Running     0          19d
+kube-system   vpnkit-controller                        1/1     Running     0          19d
+mynamespace   nginx-6db489d4b7-g4wg2                   1/1     Running     0          41m

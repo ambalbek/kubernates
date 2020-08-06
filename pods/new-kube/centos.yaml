@@ -1,3 +1,4 @@
+#kubectl run centos --image=centos --restart=Never --dry-run -o yaml --command -- env > centos.yaml
 apiVersion: v1
 kind: Pod
 metadata:
