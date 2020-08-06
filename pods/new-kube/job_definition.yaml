@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata: 
+  name: test
+spec:
+  completions: 5
+  parallelism: 3
+  template:
+    spec:
+      containers:
+        - name: centos
+          image: centos
+          command: ['echo', 'hello world!']
+      restartPolicy: Never

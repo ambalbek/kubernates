@@ -1,0 +1,19 @@
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.1.1.211. Set the 'ServerName' directive globally to suppress this message
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.1.1.211. Set the 'ServerName' directive globally to suppress this message
+[Wed Aug 05 13:09:22.374057 2020] [mpm_event:notice] [pid 1:tid 140431644261704] AH00489: Apache/2.4.43 (Unix) configured -- resuming normal operations
+[Wed Aug 05 13:09:22.374445 2020] [core:notice] [pid 1:tid 140431644261704] AH00094: Command line: 'httpd -D FOREGROUND'
+/docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+/docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+10-listen-on-ipv6-by-default.sh: Getting the checksum of /etc/nginx/conf.d/default.conf
+10-listen-on-ipv6-by-default.sh: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+/docker-entrypoint.sh: Configuration complete; ready for start up
+1:C 05 Aug 2020 11:14:56.217 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1:C 05 Aug 2020 11:14:56.217 # Redis version=6.0.6, bits=64, commit=00000000, modified=0, pid=1, just started
+1:C 05 Aug 2020 11:14:56.217 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+1:M 05 Aug 2020 11:14:56.218 * Running mode=standalone, port=6379.
+1:M 05 Aug 2020 11:14:56.218 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+1:M 05 Aug 2020 11:14:56.218 # Server initialized
+1:M 05 Aug 2020 11:14:56.218 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+1:M 05 Aug 2020 11:14:56.219 * Ready to accept connections

@@ -1,0 +1,60 @@
+Name:         centos-56c49d477d-hkdl7
+Namespace:    default
+Priority:     0
+Node:         docker-desktop/192.168.65.3
+Start Time:   Wed, 05 Aug 2020 11:35:31 -0500
+Labels:       pod-template-hash=56c49d477d
+              run=centos
+Annotations:  <none>
+Status:       Running
+IP:           10.1.1.241
+IPs:
+  IP:           10.1.1.241
+Controlled By:  ReplicaSet/centos-56c49d477d
+Containers:
+  centos:
+    Container ID:   docker://997e3677b42e2299bbd41e0492f32230337f8c08903f8b999d901c38d5e8c091
+    Image:          centos
+    Image ID:       docker-pullable://centos@sha256:4062bbdd1bb0801b0aa38e0f83dece70fb7a5e9bce223423a68de2d8b784b43b
+    Port:           <none>
+    Host Port:      <none>
+    State:          Waiting
+      Reason:       CrashLoopBackOff
+    Last State:     Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Wed, 05 Aug 2020 11:39:41 -0500
+      Finished:     Wed, 05 Aug 2020 11:39:41 -0500
+    Ready:          False
+    Restart Count:  5
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-dg8bd (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             False 
+  ContainersReady   False 
+  PodScheduled      True 
+Volumes:
+  default-token-dg8bd:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-dg8bd
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason     Age                    From                     Message
+  ----     ------     ----                   ----                     -------
+  Normal   Scheduled  <unknown>              default-scheduler        Successfully assigned default/centos-56c49d477d-hkdl7 to docker-desktop
+  Normal   Pulling    3m55s (x3 over 4m34s)  kubelet, docker-desktop  Pulling image "centos7"
+  Warning  Failed     3m54s (x3 over 4m33s)  kubelet, docker-desktop  Failed to pull image "centos7": rpc error: code = Unknown desc = Error response from daemon: pull access denied for centos7, repository does not exist or may require 'docker login': denied: requested access to the resource is denied
+  Warning  Failed     3m54s (x3 over 4m33s)  kubelet, docker-desktop  Error: ErrImagePull
+  Normal   BackOff    3m31s (x4 over 4m33s)  kubelet, docker-desktop  Back-off pulling image "centos7"
+  Warning  Failed     3m31s (x4 over 4m33s)  kubelet, docker-desktop  Error: ImagePullBackOff
+  Normal   Pulling    3m16s (x2 over 3m17s)  kubelet, docker-desktop  Pulling image "centos"
+  Normal   Pulled     3m15s (x2 over 3m16s)  kubelet, docker-desktop  Successfully pulled image "centos"
+  Normal   Created    3m15s (x2 over 3m16s)  kubelet, docker-desktop  Created container centos
+  Normal   Started    3m15s (x2 over 3m16s)  kubelet, docker-desktop  Started container centos

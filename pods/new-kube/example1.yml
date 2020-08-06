@@ -14,12 +14,11 @@ spec:
       containers:
         - name: httpd
           image: httpd:2.4-alpine
-          envFrom:
-            - configMapRef:
-                name: appcolor
+          ports:
+          - containerPort: 80
         - name: redis
           image: redis
   selector:
     matchLabels:
       app: cronos
-  replicas: 3
+  replicas: 1
