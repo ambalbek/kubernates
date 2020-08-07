@@ -1,0 +1,8 @@
+#k create ns myns --dry-run -o yaml > myns_ns.yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: null
+  name: myns
+spec: {}
+status: {}
