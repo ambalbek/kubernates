@@ -1,0 +1,13 @@
+apiVersion: v1
+data:
+  special: |
+    var3=val3
+    var4=val4
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2020-08-17T13:53:02Z"
+  name: config3
+  namespace: default
+  resourceVersion: "934811"
+  selfLink: /api/v1/namespaces/default/configmaps/config3
+  uid: 44b39efb-befd-4fdf-982d-d134b48dd93c
